@@ -38,7 +38,7 @@ export default function SplashScreen() {
         <div style={{ display: "grid", gap: "1.5rem" }}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
             <Link
-              to="/login"
+              to="/auth"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -62,7 +62,7 @@ export default function SplashScreen() {
 
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
             <Link
-              to="/register"
+              to="/auth"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -82,6 +82,54 @@ export default function SplashScreen() {
             </Link>
             <span style={{ color: "#94a3b8", fontSize: "0.95rem" }}>
               New here? Create an account.
+            </span>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
+            <Link
+              to="/vote"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                minWidth: 160,
+                padding: "1rem 1.8rem",
+                borderRadius: 999,
+                background: "#f59e0b",
+                color: "#fff",
+                textDecoration: "none",
+                fontWeight: 700,
+                transition: "transform 0.2s ease, box-shadow 0.2s ease",
+              }}
+            >
+              🗳️ Голосование
+            </Link>
+            <span style={{ color: "#94a3b8", fontSize: "0.95rem" }}>
+              Поделитесь своим мнением.
+            </span>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
+            <Link
+              to="/mood-vote"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                minWidth: 160,
+                padding: "1rem 1.8rem",
+                borderRadius: 999,
+                background: "#2563eb",
+                color: "#fff",
+                textDecoration: "none",
+                fontWeight: 700,
+                transition: "transform 0.2s ease, box-shadow 0.2s ease",
+              }}
+            >
+              Share Your Mood
+            </Link>
+            <span style={{ color: "#94a3b8", fontSize: "0.95rem" }}>
+              Express how you're feeling today.
             </span>
           </div>
         </div>

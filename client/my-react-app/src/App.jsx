@@ -1,11 +1,10 @@
-// App.jsx
-// This is the main entry point for the app. Students should not need to change this file except to add new routes or wrap the app in providers.
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import SupportChat from "./components/SupportChat";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Auth from "./pages/Auth";
+import MoodPage from "./pages/MoodPage";
+import VotePage from "./pages/VotePage";
 import SplashScreen from "./components/SplashScreen";
 
 // Home/Landing page component
@@ -20,12 +19,14 @@ export default function App() {
       <Routes>
         {/* Landing page route */}
         <Route path="/" element={<Home />} />
-        {/* Login page route */}
-        <Route path="/login" element={<Login />} />
-        {/* Register page route */}
-        <Route path="/register" element={<Register />} />
+        {/* Auth page route (Sign In & Register) */}
+        <Route path="/auth" element={<Auth />} />
         {/* Support chat route */}
         <Route path="/support" element={<SupportChat />} />
+        {/* Mood vote route */}
+        <Route path="/mood-vote" element={<MoodPage />} />
+        {/* Vote page route */}
+        <Route path="/vote" element={<VotePage />} />
       </Routes>
     </Router>
   );
