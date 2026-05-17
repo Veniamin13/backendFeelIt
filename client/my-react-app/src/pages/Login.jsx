@@ -8,7 +8,7 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/");
+    navigate("/home", { replace: true });
   };
 
   return (
@@ -35,22 +35,21 @@ export default function Login() {
           position: "relative",
         }}
       >
-        <button
-          onClick={() => navigate(-1)}
-          style={{
-            position: "absolute",
-            top: 20,
-            left: 20,
-            padding: "0.65rem 1rem",
-            borderRadius: 999,
-            background: "rgba(255,255,255,0.08)",
-            border: "1px solid rgba(255,255,255,0.18)",
-            color: "#fff",
-            cursor: "pointer",
-          }}
-        >
-          Back
-        </button>
+        <div style={{ display: "flex", gap: "0.75rem", position: "absolute", top: 20, left: 20 }}>
+          <button
+            onClick={() => navigate(-1)}
+            style={{
+              padding: "0.65rem 1rem",
+              borderRadius: 999,
+              background: "rgba(255,255,255,0.08)",
+              border: "1px solid rgba(255,255,255,0.18)",
+              color: "#fff",
+              cursor: "pointer",
+            }}
+          >
+            Back
+          </button>
+        </div>
 
         <h1 style={{ fontSize: "2.6rem", marginBottom: "0.75rem", textAlign: "center" }}>
           Welcome Back
