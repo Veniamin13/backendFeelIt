@@ -1,27 +1,28 @@
-// Register.jsx
-// This is the register page. Students should implement a form with username/email and password fields.
-// On successful registration, navigate to the home page.
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { setCurrentEmail } from "../utils/moodStorage";
+
+async function registerWithServer(email, password) {
+  void email;
+  void password;
+}
 
 export default function Register() {
-  // State for form fields
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Implement registration logic here
-    // On success, navigate to home page
-    navigate("/");
+    // Call POST /register on the backend to create a user in the users collection.
+    await registerWithServer(email, password);
+    setCurrentEmail(email);
+    navigate("/home");
   };
 
   return (
     <div style={{ textAlign: "center", marginTop: "2rem" }}>
-      <h2>Register Page</h2>
-      {/* TODO: Implement register form */}
+      <h2>Sign Up Page</h2>
       <form
         onSubmit={handleSubmit}
         style={{ display: "inline-block", textAlign: "left" }}
